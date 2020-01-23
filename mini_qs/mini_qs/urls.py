@@ -16,8 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from .view_healthcheck import current_datetime
-
+from lessons import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('health-check',current_datetime  ),
+    path('lessons',views.ListLesson.as_view()),
 ]
